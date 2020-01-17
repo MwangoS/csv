@@ -16,8 +16,8 @@ namespace csv.Tests
         [TestMethod()]
         public void ReadInCSVTest()
         {
-            var path = "c://csvfiles//worldcities.csv";
-            var doubleTypeConversion = new DoubleConversion();
+            var path = "C:/csvfiles//worldcities.csv"; 
+             var doubleTypeConversion = new DoubleConversion();
             IList<CityModel> myList = ReadCsv.ReadCsvFile<CityModel, CityMap>(path, doubleTypeConversion);
             var countryCapitalQuery = from s in myList
                            where s.Capital.Equals("primary")
@@ -29,7 +29,7 @@ namespace csv.Tests
                 Debug.Write(city.Country + ": " + city.City_name + Environment.NewLine);
             }
             var queryName = nameof(countryCapitalQuery);
-            var writePath = "c://csvfiles//" +  queryName  + ".csv";
+            var writePath = "C:/csvfiles//" +  queryName  + ".csv";
             using (var writer = new StreamWriter(writePath))
             using (var csv = new CsvWriter(writer))
             {
