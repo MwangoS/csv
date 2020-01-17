@@ -44,13 +44,13 @@ namespace csv.Tests
 
             Assert.AreEqual(15493, myList.Count());
 
-            // countryQuery = records.Where(city => city.Country.Equals("United States"));
-            /*
-            foreach (CityModel city in countryQuery)
+            /* countryCapitalQuery = records.Where(city => city.Country.Equals("United States"));
+            
+            foreach (CityModel city in countryCapitalQuery)
             {
                 var name = city.City_name.ToString();
-            }
-            */
+            }*/
+            
         }
     }
 }
